@@ -244,7 +244,7 @@ $$
 
 **Table 5.  Inline Math Function (Alligned Left)**
 
-$\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\mbox{First number}&x&8\\\mbox{Second number} & y & 15\\\mbox{Sum}&x+y&23\\\mbox{Difference}&x-y&-7\\\mbox{Product}&xy&120\end{array}$
+$\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\mbox{First number} & x & 8\\\mbox{Second number} & y & 15\\\mbox{Sum} & x+y & 23\\\mbox{Difference} & x-y & -7\\\mbox{Product} & xy & 120\end{array}$
 
 # References  <a id="References"></a>
 
