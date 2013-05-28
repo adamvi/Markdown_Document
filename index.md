@@ -65,17 +65,17 @@ In nibh dui, rutrum sit amet egestas eu, dapibus imperdiet lectus. Quisque urna 
 # Results <a id="Results"></a>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat, dui sit amet placerat tincidunt, nibh ligula faucibus elit, nec adipiscing sapien lacus ullamcorper risus. Vivamus vitae tortor id lectus hendrerit aliquet. Nulla sit amet arcu ac velit consequat vulputate et non magna. Mauris quis metus sapien. Ut elit erat, semper vitae pharetra eleifend, ornare a augue. Suspendisse sed sapien nunc. Praesent dolor tellus, euismod bibendum eleifend eu, faucibus sed metus. Sed sed elit quis nibh accumsan congue nec vel ligula.
 
-{% comment %}<!--  Markdown Version of Table 2
+<!--  Markdown Version of Table 2
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
-|**Table 2.**          |             |             |             |             |             | Varius Nec Nibh|
+|**Table 2.**          |             |             |             |             |            | Varius Nec Nibh|
 |                      |             | Aliquam Leo Lorem |       |             |           | Vel Ultricies Eu|
 |:---------------------|------------:|------------:|------------:|------------:|--------------:|------------:|
 |                      |...............|............................|...............|      |       |         |
-|                      | Nec Nibh   |  Ultricies  |   Cras Purus   |  Nec Nibh  |   Ultricies   |   Cras Purus   |
-| Pellentesque    |   362.980   |    0.019    |     8.004   |   248.836   |     -0.428    |     5.652   |
-| Pellentesque Nec |   360.795   |   -0.001    |     7.512   |   287.078   |     -0.057    |     6.225   |
+|                      | Nec Nibh   |  Ultricies   |  Cras Purus |  Nec Nibh   |   Ultricies   |  Cras Purus |
+| Pellentesque         |   362.980   |    0.019    |     8.004   |   248.836   |     -0.428    |     5.652   |
+| Pellentesque Nec     |   360.795   |   -0.001    |     7.512   |   287.078   |     -0.057    |     6.225   |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
--->{% endcomment %}
+-->
 
 **Table 2.  A Table Produced Using HTML Code Directly within the Document**
 <div>
@@ -203,24 +203,24 @@ HTML Provides the most flexible table presentation I've found.  Here is another 
 </table>
 </div>
 
-{% comment %}<!--  Markdown Version of Table 3
+<!--  Markdown Version of Table 3
 |----------------------+-------------+-------------+-------------+-------------+-------------+-------------|
 |**Table 3.**          |             |             |             |             |             |             |
-|                      |         | Mean Amet egestas |             |             |       | Median Amet egestas |
+|                      |       | Mean Amet egestas |             |           |       | Median Amet egestas |
 |:---------------------|------------:|------------:|:------------|------------:|------------:|------------:|
 |                      |...............|.......................|...............|       |     |             |
-|                      | Nec Nibh   |  Ultricies  |   Cras Purus   |  Nec Nibh  |  Ultricies  |   Cras Purus   |
+|                      | Nec Nibh    |  Ultricies  |  Cras Purus | Nec Nibh    |  Ultricies  |  Cras Purus |
 |                      |             |             |             |             |             |             |
 | Pellentesque
-| Without Dictumst        |    5.574    |    -0.196   |    2.360    |   26.366    |   -0.104    |    5.137    |
-| With Dictumst           |    4.741    |    -0.075   |    2.177    |   28.364    |    0.034    |    5.329    |
+| Without Dictumst     |    5.574    |    -0.196   |    2.360    |   26.366    |   -0.104    |    5.137    |
+| With Dictumst        |    4.741    |    -0.075   |    2.177    |   28.364    |    0.034    |    5.329    |
 |===
 |                      |             |             |             |             |             |             |
 | Pellentesque Nec
-| Without Dictumst        |    5.948    |    -0.263    |   2.433    |   27.101    |   -0.266    |    5.199    |
-| With Dictumst           |    4.519    |     0.094    |   2.125    |   25.679    |    0.084    |    5.060    |
+| Without Dictumst     |    5.948    |    -0.263    |   2.433    |   27.101    |   -0.266    |    5.199    |
+| With Dictumst        |    4.519    |     0.094    |   2.125    |   25.679    |    0.084    |    5.060    |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-----------|
--->{% endcomment %}
+-->
 
 ## Tables in LaTeX <a id="More Tables and Figures + Tables in LaTeX"></a>
 
