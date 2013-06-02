@@ -42,18 +42,37 @@ This document includes some pretty fine features, including the abilty to render
 There are three types of table examples provided in this section.  The degree of difficulty increases from basic markdown tables to LaTeX and bona-fide HTML script included directly within the markdown text document.
 
 ## Mathematical Equations
-When "kramdown" flavor of Markdown is specified in the _config.yml file, it is possible to produce beatiful mathematics equations, either inline or as a seperate "display" line.  Equations are writen in LaTeX form.  For example, to include an inline LaTeX equation you enclose the equation in $ delimiters, for example: `$\frac{1}{n} \sum_{i=1}^{n} x_{i}$` produces $\frac{1}{n} \sum _{i=1}^{n} x _{i}$ inline.  This, of course, is the equation for the Arithmetic mean.  Other, more complex equations may need their own line, or "display".  Equations that are displayed are also numbered according to order of presentation.  For example:
+When "kramdown" flavor of Markdown is specified in the _config.yml file, it is possible to produce beatiful mathematics equations, either inline or as a seperate "display" line.  Equations are writen in LaTeX form.  For example, to include an inline LaTeX equation you enclose the equation in $ delimiters, for example: `$\frac{1}{n} \sum_{i=1}^{n} x_{i}$` produces $\frac{1}{n} \sum _{i=1}^{n} x _{i}$ inline.  This, of course, is the equation for the Arithmetic mean.  Other, more complex, equations may need their own line, or "display".  Equations that are displayed are also numbered according to order of presentation.  For example:
 
 $$ MSE = \frac{1}{n} \sum_ {i=1}^n (\widehat{\theta}_ {i} - \theta_i)^2$$
 
 $$ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta} - \theta)^2]$$
 
 ## A Basic Markdown Table
-The nicest example tables are provided using raw HTML in subsequent sections.  This, however, sucks and kinda defeats the purpose of using markdown to begin with.  This section provides a simple example of a table produced in 'pure' markdown.    None of these options are seem great to me, so if you have a better (i.e. 'pure' markdown) solution please let me know by forking this repository and a placing a pull request, or by adding an [issue](https://github.com/adamvi/Markdown_Tests2/issues).
+The nicest example tables are provided using raw HTML in subsequent sections.  This, however, sucks and kinda defeats the purpose of using markdown to begin with.  This section provides a simple example of a table produced in 'pure' markdown.    None of these options seem great to me, so if you have a better (i.e. 'pure' markdown) solution please let me know by forking this repository and a placing a pull request, or by adding an [issue](https://github.com/adamvi/Markdown_Document/issues).
+
+There are many simple examples of markdown tables, and a cheatsheet to this (and other good stuff) can be [found at this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables).  Here is their example:
+
+Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+### Here is an attempt I made at making a more complex table. 
 
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
-|***Table 1.***         |             |             |             |             |               |             |
-|                      |             | **Aliquam Leo Lorem** |       |        |        | **Varius Nec Nibh** |
+|***Table 1.***        |             |             |             |             |               |             |
+|                      |             | **Aliquam Leo Lorem** |       |         |      | **Aliquam Leo Nibh** |
 |:---------------------|------------:|------------:|------------:|------------:|--------------:|------------:|
 |                      |...............|............................|...............|      |       |         |
 |                      |  Nec Nibh   |  Ultricies  | Cras Purus  |   Nec Nibh  | Ultricies   |  Cras Purus   |
@@ -62,7 +81,7 @@ The nicest example tables are provided using raw HTML in subsequent sections.  T
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 
 ## A LaTeX Table
-Tables can also be produced using the "array" environment.  LaTeX math code can be interpreted using Math Jax, and array is a math mode analog to the tabular environment.  Most of the functionality of the tabular is available in array.  However, not everything is available.  For example, Table 3 would require the use of '\multicolumn' to do the job of HTML codes 'colspan'.  
+Tables can also be produced using the LaTeX "array" environment.  When presented as math code, an array can be interpreted as a table when also using Math Jax.  Although array is a math mode analog to the tabular environment, some of the functionality of tabular is available in array.  For example, Table 3 would require the use of '\multicolumn' to do the job of HTML codes 'colspan'.  Here is some [documentation about arrays](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Matrices.html).
 
 Like [display LaTeX math functions](http://www.rstudio.com/ide/docs/authoring/using_markdown_equations), the array is enclosed in double dollar sign, `$$`, enclosures in the markdown text. Here is an example of a simple LaTeX array used in markdown.
 
@@ -80,10 +99,9 @@ $$
 
 [Inline LaTeX math](http://www.rstudio.com/ide/docs/authoring/using_markdown_equations) can also be used.  Here the array is enclosed in single dollar sign, `$` in the markdown text.
 
-**Table 5.  Inline Math Function (Alligned Left)**
+**Table 5.  Inline Math Function (Alligned Left, requires quadruple backslashes for 'end line')**
 
-$\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\mbox{First number} & x & 8\\\mbox{Second number} & y & 15\\\mbox{Sum} & x+y & 23\\\mbox{Difference} & x-y & -7\\\mbox{Product} & xy & 120\end{array}$
-
+$\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\\\mbox{First Number} & x & 8\\\\\mbox{Second Number} & y & 15\\\\\mbox{Sum} & x+y & 23\\\\\mbox{Difference}&  x-y & -7\\\\\mbox{Product} & xy & 120 \end{array}$
 
 ## Several HTML Tables
 As I have mentioned, HTML tables are potentially more flexible, beautiful and awesome than either LaTeX or Markdown tables.  But they make me want to cry when I see the code and/or try to interpret.  I wish they were easier to produce and read, but they are not.  In the end it may slightly defeat the purpose of using markdown to begin with, but at least the option exists.
@@ -110,7 +128,7 @@ As I have mentioned, HTML tables are potentially more flexible, beautiful and aw
     <tr>
         <th style='font-weight: 900; border-top: 4px double grey;'></th>
         <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Aliquam Leo Lorem</th><th style='border-top: 4px double grey;'>&nbsp;</th>
-        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Varius Nec Nibh Vel Ultricies Eu</th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Aliquam Leo Nibh</th>
     </tr>
     <tr>
         <th style=';'>&nbsp;</th>
@@ -159,7 +177,7 @@ HTML Provides the most flexible table presentation I've found.  Here is another 
     <thead>
     <tr>
         <th style='font-weight: 900; border-top: 4px double grey;'></th>
-        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Man Amet egestas</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Mean Amet egestas</th><th style='border-top: 4px double grey;'>&nbsp;</th>
         <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Median Amet egestas</th>
     </tr>
     <tr>
