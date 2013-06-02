@@ -1,18 +1,10 @@
 ---
-layout: report
+layout: report_simple
 report_title: An Example Github Pages Document
 report_abstract: Here is some text about the document - something like an abstract ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis lectus et tellus pharetra sodales. Duis eget sapien quis urna sagittis facilisis. Ut aliquam dui ut est euismod a mattis magna semper. Curabitur nec magna turpis. Etiam suscipit lectus vel lacus dignissim sollicitudin non at nisi. Proin ut nibh non magna vulputate laoreet in eget felis. Vivamus eget turpis nulla. Aliquam erat volutpat. Suspendisse potenti. Nullam viverra diam sit amet risus fermentum iaculis. Integer vitae purus eu urna ultrices sodales vel sed nisl. Cras lorem est, ultrices sed vulputate in, mattis ac justo.
 report_date: June 2013
 meta_title: Github Document
-meta_subtitle: Lorem ipsum
-contents:
-  - section: Introduction
-    subsections: [Lists and YAML Front Matter, Long Section Names]
-  - section: Equations and Tables
-    subsections: [Mathematical Equations, A Basic Markdown Table, A LaTeX Table, Several HTML Tables]
-  - section: Figures and Charts
-    subsections: [Static Figures, Images from the Web, Interactive D3 Charts]
-  - section: References
+meta_subtitle: Simple Version
 ---
 
 # Introduction
