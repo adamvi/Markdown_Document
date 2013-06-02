@@ -1,46 +1,63 @@
 ---
 layout: report
-report_title: The Lorem Ipsum Document
-report_abstract: Here is some text about the article - something like an abstract ...
+report_title: An Example Github Pages Document
+report_abstract: Here is some text about the document - something like an abstract ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis lectus et tellus pharetra sodales. Duis eget sapien quis urna sagittis facilisis. Ut aliquam dui ut est euismod a mattis magna semper. Curabitur nec magna turpis. Etiam suscipit lectus vel lacus dignissim sollicitudin non at nisi. Proin ut nibh non magna vulputate laoreet in eget felis. Vivamus eget turpis nulla. Aliquam erat volutpat. Suspendisse potenti. Nullam viverra diam sit amet risus fermentum iaculis. Integer vitae purus eu urna ultrices sodales vel sed nisl. Cras lorem est, ultrices sed vulputate in, mattis ac justo.
 report_date: June 2013
-meta_title: HTML Document
+meta_title: Github Document
 meta_subtitle: Lorem ipsum
 contents:
   - section: Introduction
-    subsections: [Cras lorem est mattis ac justo]
-  - section: Methods
-    subsections: [Mathematical Equations, Curabitur ac Volutpat Nunc]
-  - section: Results
-  - section: More Tables and Figures
-    subsections: [Images from the Web, More HTML Tables, Tables in LaTeX]
+    subsections: [Lists and YAML Front Matter, Long Section Names]
+  - section: Equations and Tables
+    subsections: [Mathematical Equations, A Basic Markdown Table, A LaTeX Table, Several HTML Tables]
+  - section: Figures and Charts
+    subsections: [Static Figures, Images from the Web, Interactive D3 Charts]
   - section: References
 ---
 
-# Introduction <a id="Introduction"></a>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lobortis lectus et tellus pharetra sodales. Duis eget sapien quis urna sagittis facilisis. Ut aliquam dui ut est euismod a mattis magna semper. Curabitur nec magna turpis. Etiam suscipit lectus vel lacus dignissim sollicitudin non at nisi. Proin ut nibh non magna vulputate laoreet in eget felis. Vivamus eget turpis nulla. Aliquam erat volutpat. Suspendisse potenti. Nullam viverra diam sit amet risus fermentum iaculis. Integer vitae purus eu urna ultrices sodales vel sed nisl.
+# Introduction
+This Github repository provides a template for a nice looking HTML document by transforming a simple markdown text file into a static website using Jekyll. Because Github supports Jekyll, this document can be hosted for free on [Github pages](http://pages.github.com/).  You are now looking at the sample version of this document, which includes example text (including lists, sections, subsections and sub-subsections), as well as tables and figures of varying levels of sophistication.  This includes the direct use of HTML code integrated into the markdown text file.  When possible I have provided simple markdown analogues.  But as would be expected, the more detailed the document you want, the more detailed the code required to produce it...
 
-1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-2. Phasellus quis sem a tortor tempus faucibus.
-3. Nam eget velit at odio imperdiet congue ut sed nisl.
- 
+##  Lists and YAML Front Matter
 
-## Cras lorem est mattis ac justo <a id="Introduction + Cras lorem est mattis ac justo"></a>
-Cras lorem est, ultrices sed vulputate in, mattis ac justo. Donec vulputate risus id augue condimentum tempus. Vivamus tempus luctus metus, eu egestas massa bibendum quis. Donec fermentum nulla sit amet mauris ullamcorper at accumsan urna dapibus. Vestibulum vel elit at tortor sodales condimentum euismod in ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec auctor fringilla leo pharetra ullamcorper. Integer venenatis ipsum vitae nisl feugiat imperdiet. Vivamus ante libero, scelerisque ut vestibulum vitae, sagittis ut lorem.
+This section provides an example of how to form basic lists and and also provides an explanation of the YAML front matter.  WTF is [YAML front matter](http://jekyllrb.com/docs/frontmatter/), you ask?  That is the very top section of the [index.md](https://raw.github.com/adamvi/Markdown_Document/gh-pages/index.md) file.  It is composed of several parts that define how your Markdown Document will appear, and will require customization by you the author.
 
-* Mauris in ligula ipsum, at vehicula turpis.
-* Duis at erat non enim fringilla posuere sed non dolor.
+1.  'layout' - this corresponds to the *.html file you want to use as the 'layout' for your document.  Two choices are provided here in the `_layouts` directory.  The first is report.html, which is the more detailed document that includes the "document lens" navigation tool on the left hand side of the static website as well as the DISQUS comment section at the bottom.  The other layout template is report_simple.html, which provides only the formatted document.  It is probably easier to print out this version ...
+2.  'report_title' - This is the printed title at the top of the document
+3.  'report_abstract' - this is the blurb that (can) appear underneath the tittle.
+4.  'report_date' - the date the report/document was published
+5.  'meta_title' - The informational title that appears on the tab in the web-browser that the page is displayed in. 
+6.  'meta_subtitle' - The informational subtitle that appears on the web-browser tab.  Seperated from the meta title by a colon (:).
+7.  'contents' - These are the document content descriptors that create the "document lens" navigation tool on the left hand side of the static website.  This is a compound YAML entry that is comprised of two components:
+    1. 'sections' - the 'header 1' in markdown and/or 'h1' in html
+	2. 'subsections' - the 'header 2' in markdown and/or 'h2' in html
 
-# Methods <a id = "Methods"></a>
+*  **NOTE.**  The sections and subsections must generally be IDENTICAL to the actual section names.  However, one can provide alternate names for the section entry in the document lens, but this requires the use of direct HTML coding.  See the following section [Donec Vulputate ...](#donec-vulputate-risus) for more details: 
+*  **NOTE.**  Although HTML has up to 6 headers (h6), only the first 2 are currently supported in the "Document Lens"
+*  **NOTE.**  Did you notice that thes **Notes** are a totally seperate list that the numbered one above?  *GROOVY...*
 
-## Mathematical Equations are Supported  <a id="Methods + Mathematical Equations"></a>
+## Long section names can be shortened in the document navigation lens ... <a id="long-section-names">
+Long section (header) names can be shortened and included in the document navigation lens (left side of page) by using HTML id code added to the header line.  For example, this h2 subsection is named "Long Section Names" in both the YAML front matter and the document navigation.  The header line is given in the markdown document as 
+
+`## Long section names can be shortened in the document navigation lens ... <a id="long-section-names">`.
+
+### Sub-Sub Sections
+Third level sections get included in the section numbering system (here 1.3.1), but the DO NOT get included in the "Document Lens" navigation.
+
+# Equations and Tables
+This document includes some pretty fine features, including the abilty to render math equations, tables and figures.  I use the kramdown flavor of markdown to allow for math formulas (via MathJax - LaTeX style).  LaTeX tables can also be rendered if one treats an 'array' as a math equation.  Unfortunately some of the nice features available in the tabular environment are not available in array (e.g. the `\multicolumn` feature).
+
+There are three types of table examples provided in this section.  The degree of difficulty increases from basic markdown tables to LaTeX and bona-fide HTML script included directly within the markdown text document.
+
+## Mathematical Equations
 When "kramdown" flavor of Markdown is specified in the _config.yml file, it is possible to produce beatiful mathematics equations, either inline or as a seperate "display" line.  Equations are writen in LaTeX form.  For example, to include an inline LaTeX equation you enclose the equation in $ delimiters, for example: `$\frac{1}{n} \sum_{i=1}^{n} x_{i}$` produces $\frac{1}{n} \sum _{i=1}^{n} x _{i}$ inline.  This, of course, is the equation for the Arithmetic mean.  Other, more complex equations may need their own line, or "display".  Equations that are displayed are also numbered according to order of presentation.  For example:
 
 $$ MSE = \frac{1}{n} \sum_ {i=1}^n (\widehat{\theta}_ {i} - \theta_i)^2$$
 
 $$ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta} - \theta)^2]$$
 
-## Curabitur ac Volutpat Nunc <a id="Methods + Curabitur ac Volutpat Nunc"></a>
-In hac habitasse platea dictumst. Donec et purus at lacus rutrum aliquet. Nullam dictum lectus vitae mi ultrices viverra sed sit amet odio. Mauris egestas tincidunt odio in blandit. Integer odio neque, eleifend vitae accumsan pellentesque, sagittis id felis. Etiam at sem quam, nec malesuada mauris. Nulla ut diam a leo dignissim volutpat non quis nunc. Suspendisse potenti.
+## A Basic Markdown Table
+The nicest example tables are provided using raw HTML in subsequent sections.  This, however, sucks and kinda defeats the purpose of using markdown to begin with.  This section provides a simple example of a table produced in 'pure' markdown.    None of these options are seem great to me, so if you have a better (i.e. 'pure' markdown) solution please let me know by forking this repository and a placing a pull request, or by adding an [issue](https://github.com/adamvi/Markdown_Tests2/issues).
 
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 |***Table 1.***         |             |             |             |             |               |             |
@@ -52,178 +69,7 @@ In hac habitasse platea dictumst. Donec et purus at lacus rutrum aliquet. Nullam
 | Pellentesque Nec     |   360.795   |   -0.001    |    True     |   379.277   |    0.088    |      False    |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 
-### Proin eu ligula nisl
-In eget lorem felis. Aliquam leo lorem, blandit vel ultricies eu, varius nec nibh. Cras Purus tristique massa convallis convallis. Sed consectetur ultrices molestie. Sed risus eros, bibendum nec feugiat sed, condimentum nec orci. Proin orci augue, lobortis non mattis sit amet, porta in magna. Cras non eros risus, non fringilla elit. Proin sit amet dui metus, vitae rutrum est. Nullam viverra, sem id malesuada molestie, est erat tempus ipsum, a gravida arcu leo sit amet est. Aenean rutrum, ipsum eget suscipit sollicitudin, lacus felis convallis justo, ac aliquet eros arcu ut orci. 
-
-*Figure 1. From a File in the Local Directory*
-
-<img src="img/Fig_1.png" alt="Fig.1" style="width: 600px;"/>
-
-### Donec sed lacus eget odio feugiat euismod
-In nibh dui, rutrum sit amet egestas eu, dapibus imperdiet lectus. Quisque urna augue, eleifend sit amet elementum vel, fringilla non libero. Aenean urna felis, ultrices vel vehicula egestas, dictum a turpis. Integer eleifend viverra massa, non varius leo pellentesque nec. Nullam sit amet justo sapien. Ut sit amet lorem ut mi hendrerit auctor. 
-
-# Results <a id="Results"></a>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut placerat, dui sit amet placerat tincidunt, nibh ligula faucibus elit, nec adipiscing sapien lacus ullamcorper risus. Vivamus vitae tortor id lectus hendrerit aliquet. Nulla sit amet arcu ac velit consequat vulputate et non magna. Mauris quis metus sapien. Ut elit erat, semper vitae pharetra eleifend, ornare a augue. Suspendisse sed sapien nunc. Praesent dolor tellus, euismod bibendum eleifend eu, faucibus sed metus. Sed sed elit quis nibh accumsan congue nec vel ligula.
-
-<!--  Markdown Version of Table 2
-|----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
-|**Table 2.**          |             |             |             |             |            | Varius Nec Nibh|
-|                      |             | Aliquam Leo Lorem |       |             |           | Vel Ultricies Eu|
-|:---------------------|------------:|------------:|------------:|------------:|--------------:|------------:|
-|                      |...............|............................|...............|      |       |         |
-|                      | Nec Nibh   |  Ultricies   |  Cras Purus |  Nec Nibh   |   Ultricies   |  Cras Purus |
-| Pellentesque         |   362.980   |    0.019    |     8.004   |   248.836   |     -0.428    |     5.652   |
-| Pellentesque Nec     |   360.795   |   -0.001    |     7.512   |   287.078   |     -0.057    |     6.225   |
-|----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
--->
-
-**Table 2.  A Table Produced Using HTML Code Directly within the Document**
-<div>
-<table class='gmisc_table' style='border-collapse: collapse;'>
-	<a name='Table 2.'></a>
-	<thead>
-	<tr>
-		<th style='font-weight: 900; border-top: 4px double grey;'></th>
-		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Aliquam Leo Lorem</th><th style='border-top: 4px double grey;'>&nbsp;</th>
-		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Varius Nec Nibh Vel Ultricies Eu</th>
-	</tr>
-	<tr>
-		<th style=';'>&nbsp;</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
-		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
-	</tr>
-	</thead><tbody>
-	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Analysis</td></tr>
-	<tr>
-		<td align='right' style=';'>Pellentesque</td>
-		<td align='right' style=';'>362.98</td>
-		<td align='right' style=';'> 0.02</td>
-		<td align='right' style=';'> 8.00</td>
-		<th style=';'>&nbsp;</th>
-		<td align='right' style=';'>287.78</td>
-		<td align='right' style=';'>-0.428</td>
-		<td align='right' style=';'> 5.65</td>
-	</tr>
-	<tr>
-		<td align='right' style='border-bottom: 1px solid grey;'>&nbsp;&nbsp;Pellentesque Nec</td>
-		<td align='right' style='border-bottom: 1px solid grey;'>360.80</td>
-		<td align='right' style='border-bottom: 1px solid grey;'>-0.00</td>
-		<td align='right' style='border-bottom: 1px solid grey;'> 7.51</td>
-		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
-		<td align='right' style='border-bottom: 1px solid grey;'>379.28</td>
-		<td align='right' style='border-bottom: 1px solid grey;'>-0.57</td>
-		<td align='right' style='border-bottom: 1px solid grey;'> 6.23</td>
-	</tr>
-	</tbody>
-</table>
-</div>
-
-In consectetur metus et eros auctor a vehicula erat sollicitudin. Ut venenatis aliquet ante vitae ultricies. Nunc vitae arcu dui. Nullam ut libero laoreet felis accumsan posuere. Suspendisse ac nisi enim. Suspendisse vel eros vel urna blandit tempus a in ligula. Nam at ante purus, ut consectetur lorem. Pellentesque laoreet euismod libero, et rutrum neque pulvinar sit amet. Quisque imperdiet scelerisque nulla, eget feugiat justo imperdiet quis. In porta commodo placerat. Curabitur quis ante dapibus enim euismod fermentum. 
-
-# More Tables and Figures <a id="More Tables and Figures"></a>
-
-## Images can also be read in from a URL <a id="More Tables and Figures + Images from the Web"></a>
-
-*Figure 2.*
-
-<img src="http://www.placekitten.com/400/400" alt="Fig.2"/>
-
-## More HTML Tables <a id="More Tables and Figures + More HTML Tables"></a>
-HTML Provides the most flexible table presentation I've found.  Here is another example
-
-**Table 3. Another Table Produced Using HTML Directly** 
-<div>
-<table class='gmisc_table' style='border-collapse: collapse;'>
-	<a name='Table 3.'></a>
-	<thead>
-	<tr>
-		<th style='font-weight: 900; border-top: 4px double grey;'></th>
-		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Man Amet egestas</th><th style='border-top: 4px double grey;'>&nbsp;</th>
-		<th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Median Amet egestas</th>
-	</tr>
-	<tr>
-		<th style=';'>&nbsp;</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
-		<th style='border-bottom: 1px solid grey;'>&nbsp;</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
-		<th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
-	</tr>
-	</thead><tbody>
-	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Pellentesque</td></tr>
-	<tr>
-		<td align='right' style=';'>Without Dictumst </td>
-		<td align='right' style=';'>5.57</td>
-		<td align='right' style=';'> -0.20</td>
-		<td align='right' style=';'> 2.36</td>
-		<th style=';'>&nbsp;</th>
-		<td align='right' style=';'>26.37</td>
-		<td align='right' style=';'>-0.10</td>
-		<td align='right' style=';'> 5.14</td>
-	</tr>
-	<tr>
-		<td align='right' style=';'>With Dictumst </td>
-		<td align='right' style=';'>4.74</td>
-		<td align='right' style=';'>-0.08</td>
-		<td align='right' style=';'> 2.18</td>
-		<th style=';'>&nbsp;</th>
-		<td align='right' style=';'>28.36</td>
-		<td align='right' style=';'> 0.03</td>
-		<td align='right' style=';'> 5.33</td>
-	</tr>
-	<tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Pellentesque Nec</td></tr>
-	<tr>
-		<td align='right' style=';'>Without Dictumst </td>
-		<td align='right' style=';'>5.95</td>
-		<td align='right' style=';'>-0.26</td>
-		<td align='right' style=';'> 2.43</td>
-		<th style=';'>&nbsp;</th>
-		<td align='right' style=';'>27.10</td>
-		<td align='right' style=';'>-0.27</td>
-		<td align='right' style=';'> 5.20</td>
-	</tr>
-	<tr>
-		<td align='right' style=';'>With Dictumst </td> 
-		<td align='right' style=';'>4.52</td>
-		<td align='right' style=';'> 0.09</td>
-		<td align='right' style=';'> 2.13</td>
-		<th style=';'>&nbsp;</th>
-		<td align='right' style=';'>25.68</td>
-		<td align='right' style=';'> 0.08</td>
-		<td align='right' style=';'> 5.06</td>
-	</tr>
-	</tbody>
-</table>
-</div>
-
-<!--  Markdown Version of Table 3
-|----------------------+-------------+-------------+-------------+-------------+-------------+-------------|
-|**Table 3.**          |             |             |             |             |             |             |
-|                      |       | Mean Amet egestas |             |           |       | Median Amet egestas |
-|:---------------------|------------:|------------:|:------------|------------:|------------:|------------:|
-|                      |...............|.......................|...............|       |     |             |
-|                      | Nec Nibh    |  Ultricies  |  Cras Purus | Nec Nibh    |  Ultricies  |  Cras Purus |
-|                      |             |             |             |             |             |             |
-| Pellentesque
-| Without Dictumst     |    5.574    |    -0.196   |    2.360    |   26.366    |   -0.104    |    5.137    |
-| With Dictumst        |    4.741    |    -0.075   |    2.177    |   28.364    |    0.034    |    5.329    |
-|===
-|                      |             |             |             |             |             |             |
-| Pellentesque Nec
-| Without Dictumst     |    5.948    |    -0.263    |   2.433    |   27.101    |   -0.266    |    5.199    |
-| With Dictumst        |    4.519    |     0.094    |   2.125    |   25.679    |    0.084    |    5.060    |
-|----------------------+-------------+-------------+-------------+-------------+---------------+-----------|
--->
-
-## Tables in LaTeX <a id="More Tables and Figures + Tables in LaTeX"></a>
-
+## A LaTeX Table
 Tables can also be produced using the "array" environment.  LaTeX math code can be interpreted using Math Jax, and array is a math mode analog to the tabular environment.  Most of the functionality of the tabular is available in array.  However, not everything is available.  For example, Table 3 would require the use of '\multicolumn' to do the job of HTML codes 'colspan'.  
 
 Like [display LaTeX math functions](http://www.rstudio.com/ide/docs/authoring/using_markdown_equations), the array is enclosed in double dollar sign, `$$`, enclosures in the markdown text. Here is an example of a simple LaTeX array used in markdown.
@@ -246,13 +92,311 @@ $$
 
 $\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\mbox{First number} & x & 8\\\mbox{Second number} & y & 15\\\mbox{Sum} & x+y & 23\\\mbox{Difference} & x-y & -7\\\mbox{Product} & xy & 120\end{array}$
 
-# References  <a id="References"></a>
+
+## Several HTML Tables
+As I have mentioned, HTML tables are potentially more flexible, beautiful and awesome than either LaTeX or Markdown tables.  But they make me want to cry when I see the code and/or try to interpret.  I wish they were easier to produce and read, but they are not.  In the end it may slightly defeat the purpose of using markdown to begin with, but at least the option exists.
+
+###  First HTML Example Table
+
+<!--  Markdown Version of Table 2
+|----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
+|**Table 2.**          |             |             |             |             |            | Varius Nec Nibh|
+|                      |             | Aliquam Leo Lorem |       |             |           | Vel Ultricies Eu|
+|:---------------------|------------:|------------:|------------:|------------:|--------------:|------------:|
+|                      |...............|............................|...............|      |       |         |
+|                      | Nec Nibh   |  Ultricies   |  Cras Purus |  Nec Nibh   |   Ultricies   |  Cras Purus |
+| Pellentesque         |   362.980   |    0.019    |     8.004   |   248.836   |     -0.428    |     5.652   |
+| Pellentesque Nec     |   360.795   |   -0.001    |     7.512   |   287.078   |     -0.057    |     6.225   |
+|----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
+-->
+
+**Table 2.  A Table Produced Using HTML Code Directly within the Document**
+<div>
+<table class='gmisc_table' style='border-collapse: collapse;'>
+    <a name='Table 2.'></a>
+    <thead>
+    <tr>
+        <th style='font-weight: 900; border-top: 4px double grey;'></th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Aliquam Leo Lorem</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Varius Nec Nibh Vel Ultricies Eu</th>
+    </tr>
+    <tr>
+        <th style=';'>&nbsp;</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
+        <th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
+    </tr>
+    </thead><tbody>
+    <tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Analysis</td></tr>
+    <tr>
+        <td align='right' style=';'>Pellentesque</td>
+        <td align='right' style=';'>362.98</td>
+        <td align='right' style=';'> 0.02</td>
+        <td align='right' style=';'> 8.00</td>
+        <th style=';'>&nbsp;</th>
+        <td align='right' style=';'>287.78</td>
+        <td align='right' style=';'>-0.428</td>
+        <td align='right' style=';'> 5.65</td>
+    </tr>
+    <tr>
+        <td align='right' style='border-bottom: 1px solid grey;'>&nbsp;&nbsp;Pellentesque Nec</td>
+        <td align='right' style='border-bottom: 1px solid grey;'>360.80</td>
+        <td align='right' style='border-bottom: 1px solid grey;'>-0.00</td>
+        <td align='right' style='border-bottom: 1px solid grey;'> 7.51</td>
+        <th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+        <td align='right' style='border-bottom: 1px solid grey;'>379.28</td>
+        <td align='right' style='border-bottom: 1px solid grey;'>-0.57</td>
+        <td align='right' style='border-bottom: 1px solid grey;'> 6.23</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+### Second HTML Example Table
+
+HTML Provides the most flexible table presentation I've found.  Here is another example
+
+**Table 3. Another Table Produced Using HTML Directly** 
+<div>
+<table class='gmisc_table' style='border-collapse: collapse;'>
+    <a name='Table 3.'></a>
+    <thead>
+    <tr>
+        <th style='font-weight: 900; border-top: 4px double grey;'></th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Man Amet egestas</th><th style='border-top: 4px double grey;'>&nbsp;</th>
+        <th align='center' colspan='3' style='font-weight: 900; border-bottom: 1px solid grey; border-top: 4px double grey;'>Median Amet egestas</th>
+    </tr>
+    <tr>
+        <th style=';'>&nbsp;</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
+        <th style='border-bottom: 1px solid grey;'>&nbsp;</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Nec Nibh</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Ultricies</th>
+        <th align='center' style='border-bottom: 1px solid grey;'>Cras Purus</th>
+    </tr>
+    </thead><tbody>
+    <tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Pellentesque</td></tr>
+    <tr>
+        <td align='right' style=';'>Without Dictumst </td>
+        <td align='right' style=';'>5.57</td>
+        <td align='right' style=';'> -0.20</td>
+        <td align='right' style=';'> 2.36</td>
+        <th style=';'>&nbsp;</th>
+        <td align='right' style=';'>26.37</td>
+        <td align='right' style=';'>-0.10</td>
+        <td align='right' style=';'> 5.14</td>
+    </tr>
+    <tr>
+        <td align='right' style=';'>With Dictumst </td>
+        <td align='right' style=';'>4.74</td>
+        <td align='right' style=';'>-0.08</td>
+        <td align='right' style=';'> 2.18</td>
+        <th style=';'>&nbsp;</th>
+        <td align='right' style=';'>28.36</td>
+        <td align='right' style=';'> 0.03</td>
+        <td align='right' style=';'> 5.33</td>
+    </tr>
+    <tr><td align='left' style='border-bottom: 1px solid grey; font-weight: 900;'>Pellentesque Nec</td></tr>
+    <tr>
+        <td align='right' style=';'>Without Dictumst </td>
+        <td align='right' style=';'>5.95</td>
+        <td align='right' style=';'>-0.26</td>
+        <td align='right' style=';'> 2.43</td>
+        <th style=';'>&nbsp;</th>
+        <td align='right' style=';'>27.10</td>
+        <td align='right' style=';'>-0.27</td>
+        <td align='right' style=';'> 5.20</td>
+    </tr>
+    <tr>
+        <td align='right' style=';'>With Dictumst </td> 
+        <td align='right' style=';'>4.52</td>
+        <td align='right' style=';'> 0.09</td>
+        <td align='right' style=';'> 2.13</td>
+        <th style=';'>&nbsp;</th>
+        <td align='right' style=';'>25.68</td>
+        <td align='right' style=';'> 0.08</td>
+        <td align='right' style=';'> 5.06</td>
+    </tr>
+    </tbody>
+</table>
+</div>
+
+<!--  Markdown Version of Table 3
+|----------------------+-------------+-------------+-------------+-------------+-------------+-------------|
+|**Table 3.**          |             |             |             |             |             |             |
+|                      |       | Mean Amet egestas |             |           |       | Median Amet egestas |
+|:---------------------|------------:|------------:|:------------|------------:|------------:|------------:|
+|                      |...............|.......................|...............|       |     |             |
+|                      | Nec Nibh    |  Ultricies  |  Cras Purus | Nec Nibh    |  Ultricies  |  Cras Purus |
+|                      |             |             |             |             |             |             |
+| Pellentesque
+| Without Dictumst     |    5.574    |    -0.196   |    2.360    |   26.366    |   -0.104    |    5.137    |
+| With Dictumst        |    4.741    |    -0.075   |    2.177    |   28.364    |    0.034    |    5.329    |
+|===
+|                      |             |             |             |             |             |             |
+| Pellentesque Nec
+| Without Dictumst     |    5.948    |    -0.263    |   2.433    |   27.101    |   -0.266    |    5.199    |
+| With Dictumst        |    4.519    |     0.094    |   2.125    |   25.679    |    0.084    |    5.060    |
+|----------------------+-------------+-------------+-------------+-------------+---------------+-----------|
+-->
+
+# Figures and Charts
+Examples of how to include figures and chartes are now provided.  These examples range from simple static images stored in a local directory or linked to a URL to interactive [D3 charts] produced using the [rCharts](http://ramnathv.github.io/rCharts/) package for the [R statistical programming language](http://www.r-project.org/).
+
+## Static Figures
+
+*Figure 1. From a File in the Local Directory*
+
+<img src="img/Fig_1.png" alt="Fig.1" style="width: 600px;"/>
+
+## Images from the Web
+
+<div class='content-node image'>
+	<div class='image-content'>    
+		<img src="http://www.placekitten.com/400/400"/>
+	</div>
+	<div class='caption'>Although this is the second figure of this document, it is labeled as 'Fig. 1' because it uses HTML code that is recognized as a specific 'class' in the document that allows for automatic figure counting (controlled in document_print.css).</div>
+</div>
+
+
+## Interactive D3 Charts
+Static charts and plots can be saved as .png, .jpg and other raw files and included in a similar fashion to the two methods shown above.  Here I show how more interesting, interactive figures can be included.  Specifically, the following 3 charts have been produced using the [rCharts](http://ramnathv.github.io/rCharts/) package available for the open-source [R statistical programming language](http://www.r-project.org/).  This R package leverages the [D3 JavaScript library](http://d3js.org/) on the backend. D3 stands for 'Data-Driven Documents'.
+
+### D3 Barchart example using a .js script file
+
+<div class='content-node image'>
+	<div class='image-content'>    
+		<div id="chart" class="rChart nvd3Plot nvd3"></div>
+			<script src="img/bar_chart_example.js" type="text/javascript" charset="utf-8"></script>
+	</div>
+	<div class='caption'> Example interactive bar chart created using the rChart package in R.  Click on the circles at the top of the chart to customize the display.</div>
+</div>
+
+### D3 Scatterplot example using inline HTML 'script'
+The 2nd chart was created using these commands:
+
+{% highlight r %}
+p1 <- nPlot(mpg ~ wt, group = 'cyl', data = mtcars, type = 'scatterChart')
+p1$xAxis(axisLabel = 'Weight')
+p1
+{% endhighlight %}
+
+<div class='content-node image'>
+	<div class='image-content'>    
+		<div id='chart64af7f973c9b' class='rChart nvd3Plot nvd3'></div>
+
+		<script type='text/javascript'>
+			$(document).ready(function(){
+			drawchart64af7f973c9b()
+			});
+			function drawchart64af7f973c9b(){ 
+				var opts = {
+					"dom": "chart64af7f973c9b", 
+					"width": 700, 
+					"height": 350, 
+					"x": "wt", 
+					"y": "mpg", 
+					"group": "cyl", 
+					"type": "scatterChart", 
+					"id": "chart64af7f973c9b"}, 
+				data = [
+					{"mpg": 21.0, "cyl": 6, "disp": 160, "hp": 110, "drat": 3.9, "wt": 2.62, "qsec": 16.46, "vs": 0, "am": 1, "gear": 4, "carb": 4},
+					{"mpg": 21.0, "cyl": 6, "disp": 160, "hp": 110, "drat": 3.9, "wt": 2.875, "qsec": 17.02, "vs": 0, "am": 1, "gear": 4, "carb": 4},
+					{"mpg": 22.8, "cyl": 4, "disp": 108, "hp": 93, "drat": 3.85, "wt": 2.32, "qsec": 18.61, "vs": 1, "am": 1, "gear": 4, "carb": 1},
+					{"mpg": 21.4, "cyl": 6, "disp": 258, "hp": 110, "drat": 3.08, "wt": 3.215, "qsec": 19.44, "vs": 1, "am": 0, "gear": 3, "carb": 1},
+					{"mpg": 18.7, "cyl": 8, "disp": 360, "hp": 175, "drat": 3.15, "wt": 3.44, "qsec": 17.02, "vs": 0, "am": 0, "gear": 3, "carb": 2},
+					{"mpg": 18.1, "cyl": 6, "disp": 225, "hp": 105, "drat": 2.76, "wt": 3.46, "qsec": 20.22, "vs": 1, "am": 0, "gear": 3, "carb": 1},
+					{"mpg": 14.3, "cyl": 8, "disp": 360, "hp": 245, "drat": 3.21, "wt": 3.57, "qsec": 15.84, "vs": 0, "am": 0, "gear": 3, "carb": 4},
+					{"mpg": 24.4, "cyl": 4, "disp": 146.7, "hp": 62, "drat": 3.69, "wt": 3.19, "qsec": 20, "vs": 1, "am": 0, "gear": 4, "carb": 2},
+					{"mpg": 22.8, "cyl": 4, "disp": 140.8, "hp": 95, "drat": 3.92, "wt": 3.15, "qsec": 22.9, "vs": 1, "am": 0, "gear": 4, "carb": 2},
+					{"mpg": 19.2, "cyl": 6, "disp": 167.6, "hp": 123, "drat": 3.92, "wt": 3.44, "qsec": 18.3, "vs": 1, "am": 0, "gear": 4, "carb": 4},
+					{"mpg": 17.8, "cyl": 6, "disp": 167.6, "hp": 123, "drat": 3.92, "wt": 3.44, "qsec": 18.9, "vs": 1, "am": 0, "gear": 4, "carb": 4},
+					{"mpg": 16.4, "cyl": 8, "disp": 275.8, "hp": 180, "drat": 3.07, "wt": 4.07, "qsec": 17.4, "vs": 0, "am": 0, "gear": 3, "carb": 3},
+					{"mpg": 17.3, "cyl": 8, "disp": 275.8, "hp": 180, "drat": 3.07, "wt": 3.73, "qsec": 17.6, "vs": 0, "am": 0, "gear": 3, "carb": 3},
+					{"mpg": 15.2, "cyl": 8, "disp": 275.8, "hp": 180, "drat": 3.07, "wt": 3.78, "qsec": 18, "vs": 0, "am": 0, "gear": 3, "carb": 3},
+					{"mpg": 10.4, "cyl": 8, "disp": 472, "hp": 205, "drat": 2.93, "wt": 5.25, "qsec": 17.98, "vs": 0, "am": 0, "gear": 3, "carb": 4},
+					{"mpg": 10.4, "cyl": 8, "disp": 460, "hp": 215, "drat": 3, "wt": 5.424, "qsec": 17.82, "vs": 0, "am": 0, "gear": 3, "carb": 4},
+					{"mpg": 14.7, "cyl": 8, "disp": 440, "hp": 230, "drat": 3.23, "wt": 5.345, "qsec": 17.42, "vs": 0, "am": 0, "gear": 3, "carb": 4},
+					{"mpg": 32.4, "cyl": 4, "disp": 78.7, "hp": 66, "drat": 4.08, "wt": 2.2, "qsec": 19.47, "vs": 1, "am": 1, "gear": 4, "carb": 1},
+					{"mpg": 30.4, "cyl": 4, "disp": 75.7, "hp": 52, "drat": 4.93, "wt": 1.615, "qsec": 18.52, "vs": 1, "am": 1, "gear": 4, "carb": 2},
+					{"mpg": 33.9, "cyl": 4, "disp": 71.1, "hp": 65, "drat": 4.22, "wt": 1.835, "qsec": 19.9, "vs": 1, "am": 1, "gear": 4, "carb": 1},
+					{"mpg": 21.5, "cyl": 4, "disp": 120.1, "hp": 97, "drat": 3.7, "wt": 2.465, "qsec": 20.01, "vs": 1, "am": 0, "gear": 3, "carb": 1},
+					{"mpg": 15.5, "cyl": 8, "disp": 318, "hp": 150, "drat": 2.76, "wt": 3.52, "qsec": 16.87, "vs": 0, "am": 0, "gear": 3, "carb": 2},
+					{"mpg": 15.2, "cyl": 8, "disp": 304, "hp": 150, "drat": 3.15, "wt": 3.435, "qsec": 17.3, "vs": 0, "am": 0, "gear": 3, "carb": 2},
+					{"mpg": 13.3, "cyl": 8, "disp": 350, "hp": 245, "drat": 3.73, "wt": 3.84, "qsec": 15.41, "vs": 0, "am": 0, "gear": 3, "carb": 4},
+					{"mpg": 19.2, "cyl": 8, "disp": 400, "hp": 175, "drat": 3.08, "wt": 3.845, "qsec": 17.05, "vs": 0, "am": 0, "gear": 3, "carb": 2},
+					{"mpg": 27.3, "cyl": 4, "disp": 79, "hp": 66, "drat": 4.08, "wt": 1.935, "qsec": 18.9, "vs": 1, "am": 1, "gear": 4, "carb": 1},
+					{"mpg": 26.0, "cyl": 4, "disp": 120.3, "hp": 91, "drat": 4.43, "wt": 2.14, "qsec": 16.7, "vs": 0, "am": 1, "gear": 5, "carb": 2},
+					{"mpg": 30.4, "cyl": 4, "disp": 95.1, "hp": 113, "drat": 3.77, "wt": 1.513, "qsec": 16.9, "vs": 1, "am": 1, "gear": 5, "carb": 2},
+					{"mpg": 15.8, "cyl": 8, "disp": 351, "hp": 264, "drat": 4.22, "wt": 3.17, "qsec": 14.5, "vs": 0, "am": 1, "gear": 5, "carb": 4},
+					{"mpg": 19.7, "cyl": 6, "disp": 145, "hp": 175, "drat": 3.62, "wt": 2.77, "qsec": 15.5, "vs": 0, "am": 1, "gear": 5, "carb": 6},
+					{"mpg": 15.0, "cyl": 8, "disp": 301, "hp": 335, "drat": 3.54, "wt": 3.57, "qsec": 14.6, "vs": 0, "am": 1, "gear": 5, "carb": 8},
+					{"mpg": 21.4, "cyl": 4, "disp": 121, "hp": 109, "drat": 4.11, "wt": 2.78, "qsec": 18.6, "vs": 1, "am": 1, "gear": 4, "carb": 2}]
+
+				var data = d3.nest()
+				.key(function(d){
+				 return opts.group === undefined ? 'main' : d[opts.group]
+				})
+				.entries(data)
+
+				nv.addGraph(function() {
+					var chart = nv.models[opts.type]()
+					 .x(function(d) { return d[opts.x] })
+					 .y(function(d) { return d[opts.y] })
+					 .width(opts.width)
+					 .height(opts.height)
+
+					chart.xAxis
+					.axisLabel("Weight")
+
+					d3.select("#" + opts.id)
+					.append('svg')
+					.datum(data)
+					.transition().duration(500)
+					.call(chart);
+
+					nv.utils.windowResize(chart.update);
+					return chart;
+				});
+			};
+		</script>
+		<div class='caption'> Example interactive scatter chart created using the rChart package in R.  Click on the circles at the top of the chart to customize the display.</div>
+	</div>
+</div>
+D3 plots can also be saved as a stand alone HTML file and linked to from the main document, as [shown here](img/scatter_plot.html).
+
+### A third D3 rChart example, because I just can't get enough of this gangsta $hi+
+
+This 3rd chart was created using these commands:
+
+{% highlight r %}
+dat <- data.frame(t=rep(0:23,each=4),var=rep(LETTERS[1:4],4),val=round(runif(4*24,0,50)))
+p8 <- nPlot(val ~ t, group =  'var', data = dat, type = 'stackedAreaChart', id = 'chart')
+p8
+{% endhighlight %}
+
+<div class='content-node image'>
+	<div class='image-content'>    
+		<div id="chart64af4f227d3" class="rChart nvd3Plot nvd3"></div>
+			<script src="img/Stacked_Area_Chart_example.js" type="text/javascript" charset="utf-8"></script>
+	</div>
+	<div class='caption'> Example interactive Stacked Area Chart created using the rChart package in R.  Click on the circles at the top of the chart to customize the display.</div>
+</div>
+
+
+# References
 
 <div id="citation" markdown="1">
 Doe, J. (2010). *First Book*. Cambridge: Cambridge University Press.
 
 Doe, J. (2012). Article. *Journal of Generic Studies*, *6*, 33–34.
 
-Doe, J., Smith, S., & Roe, J. (2007). Why Water Is Wet:  A study in the science of the obvious and collection of simulation studies meant to create a really long citation entry for this example. In S. Smith (Ed.), *Third Book*. Oxford: Oxford University Press.
-	
+Doe, J., Smith, S., & Roe, J. (2007). Why Water Is Wet:  A really long citation entry to provide an example of the hanging indent used in this document's citation div class. In S. Smith (Ed.), *Third Book*. Oxford: Oxford University Press.    
 </div>
+
