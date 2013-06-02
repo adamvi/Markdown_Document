@@ -71,6 +71,7 @@ td {
   font-style: inherit;
   font-size: 100%;
   font-family: inherit;
+  text-align:justify;
   vertical-align: baseline;
 }
 :focus {
