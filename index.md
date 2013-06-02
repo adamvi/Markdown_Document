@@ -9,7 +9,7 @@ contents:
   - section: Introduction
     subsections: [Lists and YAML Front Matter, Long Section Names]
   - section: Equations and Tables
-    subsections: [Mathematical Equations, A Basic Markdown Table, A LaTeX Table, Several HTML Tables]
+    subsections: [Mathematical Equations, Markdown Tables, LaTeX Tables, HTML Tables]
   - section: Figures and Charts
     subsections: [Static Figures, Images from the Web, Interactive D3 Charts]
   - section: References
@@ -22,8 +22,8 @@ This Github repository provides a template for a nice looking HTML document by t
 
 This section provides an example of how to form basic lists and and also provides an explanation of the YAML front matter.  WTF is [YAML front matter](http://jekyllrb.com/docs/frontmatter/), you ask?  That is the very top section of the [index.md](https://raw.github.com/adamvi/Markdown_Document/gh-pages/index.md) file.  It is composed of several parts that define how your Markdown Document will appear, and will require customization by you the author.
 
-1.  **"layout"** - this corresponds to the *.html file you want to use as the 'layout' for your document.  Two choices are provided here in the `_layouts` directory.  The first is report.html, which is the more detailed document that includes the "document lens" navigation tool on the left hand side of the static website.  The other layout template is report_simple.html, which provides only the formatted document.  It allows one to print out a clean version of the document, and may be more easily read on mobile devices.  An example of this [can be found here](simple_document.html).  The markdown file is identical to index.md, but with the revised YAML entry for 'layout' and has the 'contents' area removed from it.  The raw version of the markdown text file can be [viewed on Github](https://raw.github.com/adamvi/Markdown_Document/gh-pages/simple_document.md).
-2.  **"report_title"** - This is the printed title at the top of the document
+1.  **"layout"** - this corresponds to the *.html file you want to use as the 'layout' for your document.  Two choices are provided here in the `_layouts` directory.  The first is report.html, which is the more detailed document that includes the "document lens" navigation tool on the left hand side of the static website.  The other layout template is report_simple.html, which provides only the formatted document.  It allows one to print out a clean version of the document, and may be more easily read on mobile devices.  An example of this [can be found here](An_Example_Github_Pages_Document_Simple.html).  The markdown file is identical to index.md, but with the revised YAML entry for 'layout' and has the 'contents' area removed from it.  The raw version of the markdown text file can be [viewed on Github](https://raw.github.com/adamvi/Markdown_Document/gh-pages/An_Example_Github_Pages_Document_Simple.md).
+2.  **"report_title"** - This is the printed title at the top of the document.  It is also the name that must be given (words seperated by underscores) to both the pdf version of the report for download (if available) and the .md and .html files used for the simple (printable) version.  These links are created as a default in the report.html layout.
 3.  **"report_abstract"** - this is the blurb that (can) appear underneath the tittle.
 4.  **"report_date"** - the date the report/document was published
 5.  **"meta_title"** - The informational title that appears on the tab in the web-browser that the page is displayed in. 
@@ -44,6 +44,9 @@ Long section (header) names can be shortened and included in the document naviga
 ### Sub-Sub Sections
 Third level sections get included in the section numbering system (here 1.3.1), but the DO NOT get included in the "Document Lens" navigation.
 
+### Curabitur sodales ligula in libero
+Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
+
 # Equations and Tables
 This document includes some pretty fine features, including the abilty to render math equations, tables and figures.  I use the kramdown flavor of markdown to allow for math formulas (via MathJax - LaTeX style).  LaTeX tables can also be rendered if one treats an 'array' as a math equation.  Unfortunately some of the nice features available in the tabular environment are not available in array (e.g. the `\multicolumn` feature).
 
@@ -56,9 +59,10 @@ $$ MSE = \frac{1}{n} \sum_ {i=1}^n (\widehat{\theta}_ {i} - \theta_i)^2$$
 
 $$ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta} - \theta)^2]$$
 
-## A Basic Markdown Table
+## Markdown Tables
 The nicest example tables are provided using raw HTML in subsequent sections.  This, however, sucks and kinda defeats the purpose of using markdown to begin with.  This section provides a simple example of a table produced in 'pure' markdown.    None of these options seem great to me, so if you have a better (i.e. 'pure' markdown) solution please let me know by forking this repository and a placing a pull request, or by adding an [issue](https://github.com/adamvi/Markdown_Document/issues).
 
+### Basic Markdown Tables
 There are many simple examples of markdown tables, and a cheatsheet to this (and other good stuff) can be [found at this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables).  Here is their example:
 
 Colons can be used to align columns.
@@ -69,17 +73,19 @@ Colons can be used to align columns.
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
-The outer pipes (|) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
+The outer pipes (`|`) are optional, and you don't need to make the raw Markdown line up prettily. You can also use inline Markdown.
 
 Markdown | Less | Pretty
 --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
-### Here is an attempt I made at making a more complex table. 
+### Complex Markdown Tables
+
+Here is an attempt I made at making a more complex markdown table using seperators to mark two main sections of the table (**Aliquam Leo Lorem** and **Aliquam Leo Nibh**).  Multiple column spanning is not possible, so I try to place and align columns as best as possible.
 
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
-|***Table 1.***         |            |             |             |             |               |             |
+|***Table 1.***        |             |             |             |             |               |             |
 |                      |             | **Aliquam Leo Lorem** |       |         |      | **Aliquam Leo Nibh** |
 |:---------------------|------------:|------------:|------------:|------------:|--------------:|------------:|
 |                      |...............|............................|...............|      |       |         |
@@ -88,8 +94,8 @@ Markdown | Less | Pretty
 | Pellentesque Nec     |   360.795   |   -0.001    |    True     |   379.277   |    0.088    |      False    |
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 
-## A LaTeX Table
-Tables can also be produced using the "array" environment.  LaTeX math code can be interpreted using Math Jax, and array is a math mode analog to the tabular environment.  Most of the functionality of the tabular is available in array.  However, not everything is available.  For example, Table 3 would require the use of '\multicolumn' to do the job of HTML codes 'colspan'.  Here is some [documentation about arrays](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Matrices.html).
+## LaTeX Tables
+Tables can also be produced using the LaTeX "array" environment.  When presented as math code, an array can be interpreted as a table when also using Math Jax.  Although array is a math mode analog to the tabular environment, some of the functionality of tabular is available in array.  For example, Table 3 would require the use of '\multicolumn' to do the job of HTML codes 'colspan'.  Here is some [documentation about arrays](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/Matrices.html).
 
 Like [display LaTeX math functions](http://www.rstudio.com/ide/docs/authoring/using_markdown_equations), the array is enclosed in double dollar sign, `$$`, enclosures in the markdown text. Here is an example of a simple LaTeX array used in markdown.
 
@@ -111,7 +117,8 @@ $$
 
 $\begin{array}{lcr} \textbf{What} & \textbf{Variable} & \textbf{Integer}\\\\\mbox{First Number} & x & 8\\\\\mbox{Second Number} & y & 15\\\\\mbox{Sum} & x+y & 23\\\\\mbox{Difference}&  x-y & -7\\\\\mbox{Product} & xy & 120 \end{array}$
 
-## Several HTML Tables
+## HTML Tables
+
 As I have mentioned, HTML tables are potentially more flexible, beautiful and awesome than either LaTeX or Markdown tables.  But they make me want to cry when I see the code and/or try to interpret.  I wish they were easier to produce and read, but they are not.  In the end it may slightly defeat the purpose of using markdown to begin with, but at least the option exists.
 
 ###  First HTML Example Table
@@ -173,6 +180,10 @@ As I have mentioned, HTML tables are potentially more flexible, beautiful and aw
     </tbody>
 </table>
 </div>
+
+Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. 
+
+Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. 
 
 ### Second HTML Example Table
 
@@ -273,15 +284,16 @@ Examples of how to include figures and chartes are now provided.  These examples
 
 <img src="img/Fig_1.png" alt="Fig.1" style="width: 600px;"/>
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+
 ## Images from the Web
 
 <div class='content-node image'>
 	<div class='image-content'>    
-		<img src="http://www.placekitten.com/400/400"/>
+		<img src="http://octodex.github.com/images/baracktocat.jpg" style="width: 350px;"/>
 	</div>
 	<div class='caption'>Although this is the second figure of this document, it is labeled as 'Fig. 1' because it uses HTML code that is recognized as a specific 'class' in the document that allows for automatic figure counting (controlled in document_print.css).</div>
 </div>
-
 
 ## Interactive D3 Charts
 Static charts and plots can be saved as .png, .jpg and other raw files and included in a similar fashion to the two methods shown above.  Here I show how more interesting, interactive figures can be included.  Specifically, the following 3 charts have been produced using the [rCharts](http://ramnathv.github.io/rCharts/) package available for the open-source [R statistical programming language](http://www.r-project.org/).  This R package leverages the [D3 JavaScript library](http://d3js.org/) on the backend. D3 stands for 'Data-Driven Documents'.
