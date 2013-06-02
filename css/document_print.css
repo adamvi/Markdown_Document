@@ -12,12 +12,18 @@
 .content-node .caption {
   margin: 0px 100px;
   padding: 15px 0;
+  text-align:justify;
+  font-style: italic;
+  padding-left: 50px ;
+  text-indent: -50px ;
 }
 .content-node .caption.empty {
   display: none;
 }
 .content-node .caption:before {
   content: "Fig. " counter(figure) " ";
+  font-weight: bold;
+  padding-right: 12px ;
 }
 .content-node.image {
   text-align: center;
@@ -37,6 +43,7 @@
   min-height: 150px;
   display: block;
   padding: 5px 0;
+  text-align: center;
 }
 .image-content.placeholder .image-file {
   bottom: 30px;
