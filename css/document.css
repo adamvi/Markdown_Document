@@ -59,10 +59,7 @@ table,
 caption,
 tbody,
 tfoot,
-thead,
-tr,
-th,
-td {
+thead {
   margin: 0;
   padding: 0;
   border: 0;
@@ -102,7 +99,9 @@ caption,
 th,
 td {
   font-weight: normal;
-  padding: 6px;
+   padding-left: 7px; 
+   padding-right: 7px;
+   padding-top: 4px;   
 }
 blockquote:before,
 blockquote:after,
