@@ -410,8 +410,12 @@ D3 plots can also be saved as a stand alone HTML file and linked to from the mai
 This 3rd chart was created using these commands:
 
 {% highlight r %}
-dat <- data.frame(t=rep(0:23,each=4),var=rep(LETTERS[1:4],4),val=round(runif(4*24,0,50)))
-p8 <- nPlot(val ~ t, group =  'var', data = dat, type = 'stackedAreaChart', id = 'chart')
+dat <- data.frame(t = rep(0:23,each=4),
+                  var = rep(LETTERS[1:4],4),
+				  val = round(runif(4*24,0,50)))
+				  
+p8 <- nPlot(val ~ t, group = 'var', data = dat, 
+	type = 'stackedAreaChart', id = 'chart')
 p8
 {% endhighlight %}
 
