@@ -162,9 +162,16 @@ code {
   padding-left: 20px;
   margin-bottom: 10px;
 }
-#document ul {
+#document ul, li {
   padding-left: 20px;
   margin-bottom: 10px;
+}
+
+/* nested list indents -- http://doctype.com/changing-indentation-nested-lists-css */
+#document ul ul {
+  margin-left: 30px;
+  -moz-padding-start: 0px;
+  -webkit-padding-start: 0px;
 }
 
 p {
@@ -241,7 +248,6 @@ hr{
   padding-left: 35px ;
   text-indent: -35px ;
 }
-
 
 /* Button */
 a.button {
