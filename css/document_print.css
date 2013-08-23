@@ -117,8 +117,7 @@
 #document h1,
 #document h2,
 #document h3,
-#document h4,
-#document h5 {
+#document h4 {
   font-weight: normal;
   margin: 0em 100px 0 55px;
   padding: 0;
@@ -179,21 +178,28 @@ p.info {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-	
+h4 {
   padding: 10px 0 5px 0;
 }
 h3,
-h4,
-h5,
-h6 {
+h4 {
   padding-top: 20px;
 }
 h2 {
   font-size: 160%;
   padding-bottom: 15px;
+}
+h5 {
+  margin: 0em 100px 0 55px;
+  padding: 0;
+  line-height: 0;
+}
+h5+p {
+  margin-bottom: -20px;
+  text-align:justify;
+  padding-bottom: 0px;
+  padding-left: 35px ;
+  text-indent: -35px ;
 }
 .content-node.document .document-title {
   padding-top: 20px;
