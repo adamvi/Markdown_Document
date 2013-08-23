@@ -47,12 +47,12 @@ Third level sections get included in the section numbering system (here 1.2.1), 
 Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. 
 
 # Equations and Tables
-This document includes some pretty fine features, including the abilty to render math equations, tables and figures.  I use the kramdown flavor of markdown to allow for LaTeX style math formulas (with the use of MathJax).  LaTeX tables can also be rendered if one treats an 'array' as a math equation.  Unfortunately some of the nice features available in the tabular environment are not available in array (e.g. the `\multicolumn` feature).
+This document includes some pretty fine features, including the ability to render math equations, tables and figures.  I use the kramdown flavor of markdown to allow for LaTeX style math formulas (with the use of MathJax).  LaTeX tables can also be rendered if one treats an 'array' as a math equation.  Unfortunately some of the nice features available in the tabular environment are not available in array (e.g. the `\multicolumn` feature).
 
 There are three types of table examples provided in this section.  The degree of sophistication and difficulty increases from basic markdown tables to LaTeX and bona-fide HTML script included directly within the markdown text document.
 
 ## Mathematical Equations
-When "kramdown" flavor of Markdown is specified in the _config.yml file, it is possible to produce beatiful equations, either inline or as a seperate "display" line.  Equations are writen in LaTeX, interpreted into HTML by MathJax.  For example, to include an inline LaTeX equation you enclose the code in $ delimiters.  For example, this code `$\frac{1}{n} \sum_{i=1}^{n} x_{i}$` for the arithmetic mean produces this $\frac{1}{n} \sum _{i=1}^{n} x _{i}$ inline equation.  Other, more complex or important, equations may need their own line, or "display".  Displayed equations are also numbered according to the order of presentation.  For example:
+When "kramdown" flavor of Markdown is specified in the _config.yml file, it is possible to produce beautiful equations, either inline or as a separate "display" line.  Equations are written in LaTeX, interpreted into HTML by MathJax.  For example, to include an inline LaTeX equation you enclose the code in $ delimiters.  For example, this code `$\frac{1}{n} \sum_{i=1}^{n} x_{i}$` for the arithmetic mean produces this $\frac{1}{n} \sum _{i=1}^{n} x _{i}$ inline equation.  Other, more complex or important, equations may need their own line, or "display".  Displayed equations are also numbered according to the order of presentation.  For example:
 
 $$ MSE = \frac{1}{n} \sum_ {i=1}^n (\widehat{\theta}_ {i} - \theta_i)^2$$
 
@@ -62,7 +62,7 @@ $$ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta} - \theta)^2]$$
 The nicest example tables are provided using raw HTML in subsequent sections.  This, however, sucks and kinda defeats the purpose of using markdown to begin with.  This section provides a simple example of a table produced in 'pure' markdown.    None of these options seem great to me, so if you have a better (i.e. 'pure' markdown) solution please let me know by forking this repository and a placing a pull request, or by adding an [issue](https://github.com/adamvi/Markdown_Document/issues).
 
 ### Basic Markdown Tables
-There are many simple examples of markdown tables.  A cheatsheet for this and other good stuff can be [found on this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables).  Here are their examples:
+There are many simple examples of markdown tables.  A cheat-sheet for this and other good stuff can be [found on this page](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables).  Here are their examples:
 
 Colons can be used to align columns.
 
@@ -81,7 +81,7 @@ Markdown | Less | Pretty
 
 ### Complex Markdown Tables
 
-Here is an attempt I made at making a more complex markdown table using seperators to mark two main sections of the table (**Aliquam Leo Lorem** and **Aliquam Leo Nibh**).  Multiple column spanning is not possible, so I try to place and align columns as best as possible.
+Here is an attempt I made at making a more complex markdown table using separators to mark two main sections of the table (**Aliquam Leo Lorem** and **Aliquam Leo Nibh**).  Multiple column spanning is not possible, so I try to place and align columns as best as possible.
 
 |----------------------+-------------+-------------+-------------+-------------+---------------+-------------|
 |***Table 1.***        |             |             |             |             |               |             |
@@ -403,7 +403,7 @@ p1
 	</div>
 </div>
 
-D3 plots can also be saved as a stand alone HTML file and linked to from the main document, as [shown here](scatter_plot.html).  These .html files must be saved in the base directory (rather than the img/ directory for example) so that they have access to assetts such as the .js and .css scripts.
+D3 plots can also be saved as a stand alone HTML file and linked to from the main document, as [shown here](scatter_plot.html).  These .html files must be saved in the base directory (rather than the img/ directory for example) so that they have access to assets such as the .js and .css scripts.
 
 ### A third D3 rChart example, because I just can't get enough ...
 
