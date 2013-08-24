@@ -87,8 +87,8 @@ h5 {
 table{
 	margin-left:auto;
 	margin-right:auto;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .footnotes {
 	margin-top: 6em;
@@ -383,28 +383,24 @@ p.question {
 }
 blockquote {
   display: table;
-  margin: 20px 0 10px 0;
-  padding: 0px 20px;
-  font-size: 1.4em;
+  margin: 10px 140px 10px 140px;
+  font-size: 1em;
   line-height: 1.3em;
-  background: url("images/icons/black/left_quote_16x16.png") top left no-repeat;
-  margin-bottom: 10px;
 }
 blockquote > div {
   display: table-row;
 }
-blockquote p.quote-content {
+blockquote p {
   min-width: 200px;
   display: table-cell;
-  padding: 0 20px 0 0;
-  font-size: 1.2em;
+  padding: 0 0 10px 0;
+  font-size: 1em;
   font-style: italic;
-  background: url("images/icons/black/right_quote_16x16.png") bottom right no-repeat;
 }
 blockquote cite.quote-author {
   display: table-cell;
   padding: 20px 0 0;
-  font-size: 16px;
+  font-size: 11px;
   text-align: right;
 }
 /*
