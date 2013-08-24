@@ -170,6 +170,7 @@ code {
 /* nested list indents -- http://doctype.com/changing-indentation-nested-lists-css */
 #document ul ul {
   margin-left: 30px;
+  margin-right: 0px;
   -moz-padding-start: 0px;
   -webkit-padding-start: 0px;
 }
