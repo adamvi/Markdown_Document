@@ -61,10 +61,27 @@
 
 	          <div class="content-node document selected">
 	              <div class="content">
-	                  <div class="document-title" title="">{{ page.report_title }}</div>
-	                    <p class="published">{{ page.report_date }}</p>
+	                  <div class="document-title" title="">{{ page.report_title }}
+	                  {% if page.report_subtitle %}
+			          : </div> 
+					  <div class="document-subtitle" title="">{{ page.report_subtitle }}</div>
+					  {% endif %}
                   
-	                  <div class="lead" id="document_lead"><p style='text-align:center;'>{{ page.report_abstract }}</p></div>
+	                  {% if page.report_authors %}
+					      <div class="authors" id="authors">
+			              {% for item in page.report_authors %}
+							  {{ item }} <br>
+						  {% endfor %}
+						  </div>
+					  {% endif %}
+
+					  {% if page.report_date %}
+	                      <p class="published">{{ page.report_date }}</p>
+					  {% endif %}
+
+	                  {% if page.page.report_abstract %}
+			              <div class="lead" id="document_lead"><p style='text-align:center;'>{{ page.report_abstract }}</p></div>
+					  {% endif %}
                   
 	                  <div class="document-separator"></div>
                   
@@ -74,6 +91,7 @@
 	              </div>
           
 	          </div>
+	          
 	      </div>
 
 	      <div class="footer" style='text-align:center; margin-left: 30px; margin-right: 30px; width: 1080px;'>
