@@ -42,7 +42,7 @@
   min-width: 200px;
   min-height: 150px;
   display: block;
-  padding: 5px 0;
+  padding: 5px 5px;
   text-align: center;
 }
 .image-content.placeholder .image-file {
@@ -114,13 +114,26 @@
   margin-right: 20px;
   font-weight: bold;
 }
+
+/* Need -100px margin and 100 padding (TOP) to put heading href below navbar */
 #document h1,
 #document h2,
 #document h3,
 #document h4 {
   font-weight: normal;
-  margin: 0em 100px 0 100px;
-  padding: 0;
+  margin: -100px 100px 0 100px;
+  padding: 100px 0px 0px 0px;
+  line-height: 1.6em;
+  color: black;
+}
+
+/* Drop down heading href below navbar (when <a id= ... /a> convention used) */
+#document h1 a,
+#document h2 a,
+#document h3 a,
+#document h4 a {
+  margin: -100px 100px 0 100px;
+  padding: 100px 0px 0px 0px;
   line-height: 1.6em;
 }
 
@@ -161,16 +174,24 @@ code {
 #document ol {
   padding-left: 20px;
   margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 90px;
+  min-height: 22px;
 }
 #document ul, li {
   padding-left: 20px;
+  margin-top: 0px;
   margin-bottom: 10px;
+  margin-left: 100px;
+  margin-right: 90px;
+  min-height: 22px;
 }
 
 /* nested list indents -- http://doctype.com/changing-indentation-nested-lists-css */
 #document ul ul {
   margin-left: 30px;
   margin-right: 0px;
+  min-height: 22px;
   -moz-padding-start: 0px;
   -webkit-padding-start: 0px;
 }
