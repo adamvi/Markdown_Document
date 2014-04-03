@@ -3,4 +3,5 @@ MISC/*
 .DS_Store
 .Rproj.user
 *.Rproj
+cache/*
 
