@@ -113,6 +113,10 @@ td {
    padding-right: 7px;
    padding-top: 4px;   
 }
+th {
+  text-align: center;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
