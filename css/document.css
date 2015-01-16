@@ -77,18 +77,22 @@ thead {
 /* h5 for Reference/Citations */
 h5 {
   outline: 0;
-  font-size: 1%;
-  font-family: inherit;
+  display: none;
   color: #fff;
   text-align:justify;
   vertical-align: baseline;
 }
 
 table{
-	margin-left:auto;
+	margin-left:100px;
 	margin-right:auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
+
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 300px;
+  max-width: 720px;
 }
 .footnotes {
 	margin-top: 6em;
@@ -101,10 +105,7 @@ body {
 /*ol, ul {
   list-style: none;
 }*/
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
+
 caption,
 th,
 td {
@@ -115,6 +116,14 @@ td {
 }
 th {
   text-align: center;
+}
+
+caption {
+  width: 250%;   
+  max-width: 720px;
+  padding-bottom: 10px;
+  padding-left: 65px ;
+  text-indent: -65px ;
 }
 
 blockquote:before,

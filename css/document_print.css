@@ -28,6 +28,16 @@
 .content-node.image {
   text-align: center;
 }
+.breakbefore {
+ page-break-before: always;
+}
+.breakafter {
+ page-break-after: always;
+}
+.breakboth {
+  page-break-before: always;
+  page-break-after: always;
+}
 .image-content {
   display: inline-block;
   position: relative;
@@ -84,6 +94,7 @@
   margin-bottom: 10px;
 }
 #document h1 {
+  page-break-before: always;
   counter-reset: sub-section;
   font-size: 24px;
   border-top:none;
@@ -246,35 +257,37 @@ p+p {
 .content-node.document .document-title {
   font-size: 30px;
   line-height: 40px;
-  padding-top: 20px;
+  padding-top: 100px;
   text-align: center;
-  margin: 0 100px 10px 100px;
+  margin: 100px 100px 10px 100px;
 }
 .content-node.document .document-subtitle {
   font-size: 25px;
   font-style: italic;
   line-height: 30px;
   text-align: center;
-  margin: 0 100px 20px 100px;
+  margin: 20px 100px 50px 100px;
 }
 .content-node.document .authors {
   font-size: 18px;
   line-height: 30px;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .content-node.document .published {
   font-size: 18px;
-  margin-top: 10px;
+  margin-top: 50px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .content-node.document #document_lead {
   font-size: 18px;
   line-height: 1.2;
   font-style: italic;
+  margin-top: 50px;
   text-align: center;
+  margin-bottom: 50px;
   color: #999;
   padding: 0 100px 0 100px;
 }
