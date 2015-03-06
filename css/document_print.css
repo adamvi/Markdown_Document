@@ -179,8 +179,9 @@ code {
   font-style: italic;
 }
 #document p {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   min-height: 22px;
+  text-indent:25px;
 }
 #document ol {
   padding-left: 20px;
@@ -191,7 +192,7 @@ code {
 }
 #document ul, li {
   padding-left: 20px;
-  margin-top: 0px;
+  margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 100px;
   margin-right: 90px;
@@ -207,7 +208,7 @@ code {
   -webkit-padding-start: 0px;
 }
 #document p + ul, ol {
-  margin-top: -20px;
+  margin-top: 15px;
 }
 
 p {
@@ -237,12 +238,12 @@ h5 {
   padding: 0;
   line-height: 0;
 }
-h5+p {
+h5 > p {
   margin-bottom: -20px;
   text-align:justify;
   padding-bottom: 0px;
   padding-left: 35px ;
-  text-indent: -35px ;
+  text-indent: -60px ;
 }
 
 /*  Text indentation for paragraphs if desired

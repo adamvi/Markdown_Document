@@ -86,13 +86,15 @@ h5 {
 table{
 	margin-left:100px;
 	margin-right:auto;
-	margin-top: 20px;
+	margin-top: 5px;
 	margin-bottom: 20px;
 
   border-collapse: separate;
   border-spacing: 0;
   min-width: 300px;
   max-width: 720px;
+
+  line-height: 1.6em;
 }
 .footnotes {
 	margin-top: 6em;
@@ -102,9 +104,9 @@ body {
   color: black;
   background: white;
 }
-/*ol, ul {
-  list-style: none;
-}*/
+ol, ul {
+    line-height: 1.6em;
+}
 
 caption,
 th,
@@ -119,8 +121,8 @@ th {
 }
 
 caption {
-  width: 250%;   
-  max-width: 720px;
+  width: 275%;   
+  max-width: 850px;
   padding-bottom: 10px;
   padding-left: 65px ;
   text-indent: -65px ;
@@ -277,8 +279,8 @@ body {
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.35), inset 0px 0px 1px rgba(255, 255, 255, 0.15);
   background: #fff;
   -webkit-font-smoothing: subpixel-antialiased;
-  font-size: 16px;
-  line-height: 1.4em;
+  font-size: 18px;
+  line-height: 2em;
 }
 #document .document-separator {
   background: #000;
